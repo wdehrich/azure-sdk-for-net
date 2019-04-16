@@ -31,11 +31,15 @@ namespace Microsoft.Azure.Management.Network.Models
         /// <summary>
         /// Initializes a new instance of the EffectiveRouteListResult class.
         /// </summary>
+        /// <param name="disableBgpRoutePropagation">If true, on-premises
+        /// routes are not propagated to the network interfaces in the
+        /// subnet.</param>
         /// <param name="value">A list of effective routes.</param>
         /// <param name="nextLink">The URL to get the next set of
         /// results.</param>
-        public EffectiveRouteListResult(IList<EffectiveRoute> value = default(IList<EffectiveRoute>), string nextLink = default(string))
+        public EffectiveRouteListResult(bool? disableBgpRoutePropagation = default(bool?), IList<EffectiveRoute> value = default(IList<EffectiveRoute>), string nextLink = default(string))
         {
+            DisableBgpRoutePropagation = disableBgpRoutePropagation;
             Value = value;
             NextLink = nextLink;
             CustomInit();
@@ -45,6 +49,13 @@ namespace Microsoft.Azure.Management.Network.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
+
+        /// <summary>
+        /// Gets or sets if true, on-premises routes are not propagated to the
+        /// network interfaces in the subnet.
+        /// </summary>
+        [JsonProperty(PropertyName = "disableBgpRoutePropagation")]
+        public bool? DisableBgpRoutePropagation { get; set; }
 
         /// <summary>
         /// Gets or sets a list of effective routes.

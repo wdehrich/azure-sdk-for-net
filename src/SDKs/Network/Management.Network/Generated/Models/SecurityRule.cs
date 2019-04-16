@@ -35,8 +35,8 @@ namespace Microsoft.Azure.Management.Network.Models
         /// Initializes a new instance of the SecurityRule class.
         /// </summary>
         /// <param name="protocol">Network protocol this rule applies to.
-        /// Possible values are 'Tcp', 'Udp', and '*'. Possible values include:
-        /// 'Tcp', 'Udp', '*'</param>
+        /// Possible values are 'Tcp', 'Udp', 'Icmp', 'Esp', and '*'. Possible
+        /// values include: 'Tcp', 'Udp', 'Icmp', 'Esp', '*'</param>
         /// <param name="access">The network traffic is allowed or denied.
         /// Possible values are: 'Allow' and 'Deny'. Possible values include:
         /// 'Allow', 'Deny'</param>
@@ -122,8 +122,8 @@ namespace Microsoft.Azure.Management.Network.Models
 
         /// <summary>
         /// Gets or sets network protocol this rule applies to. Possible values
-        /// are 'Tcp', 'Udp', and '*'. Possible values include: 'Tcp', 'Udp',
-        /// '*'
+        /// are 'Tcp', 'Udp', 'Icmp', 'Esp', and '*'. Possible values include:
+        /// 'Tcp', 'Udp', 'Icmp', 'Esp', '*'
         /// </summary>
         [JsonProperty(PropertyName = "properties.protocol")]
         public string Protocol { get; set; }
