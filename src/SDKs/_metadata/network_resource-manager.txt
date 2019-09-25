@@ -1,0 +1,11 @@
+2019-09-25 21:42:54 UTC
+
+1) azure-rest-api-specs repository information
+GitHub user: wdehrich
+Branch:      network-september-release
+Commit:      e89f35dc1ea5a796eb1b2b87b847f76766784f94
+
+2) AutoRest information
+Requested version: latest
+Bootstrapper version:    C:\Users\WIEHRICH\AppData\Roaming\npm `-- autorest@2.0.4283  
+Latest installed version:    
